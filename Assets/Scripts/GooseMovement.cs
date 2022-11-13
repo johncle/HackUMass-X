@@ -40,6 +40,7 @@ public class GooseMovement : MonoBehaviour
         }
         else
         {
+            attack();
             stopMoving();
         }
     }
@@ -64,6 +65,11 @@ public class GooseMovement : MonoBehaviour
     private void stopMoving()
     {
         animator.SetBool("isMoving", false);
+    }
+
+    private void attack()
+    {
+        animator.SetTrigger("attack");
     }
 }
 
