@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 8f;
     public float collisionOffset = 0.4f;
     public ContactFilter2D movementFilter;
-    public ShoutAttack shoutAttack;
+    public PunchAttack punchAttack;
 
     Vector2 movementInput;
     SpriteRenderer spriteRenderer;
@@ -82,19 +82,19 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("");
     }
 
-    public void ShoutAttack() {
+    public void PunchAttack() {
         LockMovement();
 
         if(spriteRenderer.flipX == true){
-            shoutAttack.AttackLeft();
+            punchAttack.AttackLeft();
         } else {
-            shoutAttack.AttackRight();
+            punchAttack.AttackRight();
         }
     }
 
-    public void EndShoutAttack() {
+    public void EndPunchAttack() {
         UnlockMovement();
-        shoutAttack.StopAttack();
+        punchAttack.StopAttack();
     }
 
     public void LockMovement() {
