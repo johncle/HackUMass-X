@@ -4,27 +4,49 @@ using UnityEngine;
 
 public class GooseMovement : MonoBehaviour
 {
-    public float moveSpeed = 8f;
-    public float collisionOffset = 0.05f;
-    public ContactFilter2D movementFilter;
-    Vector2 movement;
-    Rigidbody2D rb;
-    List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
-
+    public float moveSpeed = 7f;
     public Transform target;
 
-    // Start is called before the first frame update
+    Animator animator;
+
+    private Vector3 oldPos;
+    private Vector3 newPos;
+
+    bool leftFacing = false;
+    bool rightFacing = true;
+    bool isMoving = true;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        
         if (Vector3.Distance(transform.position, target.position) > 1f)
-        {//move if distance from target is greater than 1
-            transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        {
+            isMoving = true;
+            oldPos = transform.position;
+            newPos = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            if (newPos.x < oldPos.x)
+            {
+                leftFacing = true;
+                rightFacing = false;
+            }
+            else if (newPos.x > oldPos.x)
+            {
+                leftFacing = false;
+                rightFacing = true;
+            }
+            transform.position = newPos;
         }
+        else
+        {
+            isMoving = false;
+        }
+        animator.SetBool("leftFacing", leftFacing);
+        animator.SetBool("rightFacing", rightFacing);
+        animator.SetBool("isMoving", isMoving);
     }
 }
