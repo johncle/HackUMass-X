@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class PunchAttack : MonoBehaviour
 {
-    public Collider2D punchCollider;
     public float damage = 2;
-    Vector2 rightAttackOffset;
-
-    private void Start() {
-        rightAttackOffset = transform.position;
-    }
+    public Collider2D punchCollider;
 
     public void AttackRight() {
+        Debug.Log("Right");
         punchCollider.enabled = true;
-        transform.position = rightAttackOffset;
     }
 
     public void AttackLeft() {
+        Debug.Log("Left");
         punchCollider.enabled = true;
-        transform.position = new Vector3(rightAttackOffset.x * -1, rightAttackOffset.y * -1);
     }
 
     public void StopAttack() {
@@ -31,6 +26,7 @@ public class PunchAttack : MonoBehaviour
             Enemy enemy = other.GetComponent<Enemy>();
             if (enemy != null) {
                 enemy.Health -= damage;
+                Debug.Log(enemy.Health);
             }
         }
     }

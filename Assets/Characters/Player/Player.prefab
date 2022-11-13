@@ -83,7 +83,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7130837755476184698}
   - component: {fileID: 7130837755476184696}
-  - component: {fileID: 7130837755476184697}
   m_Layer: 0
   m_Name: PunchHitbox
   m_TagString: Untagged
@@ -132,20 +131,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7130837755476184697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7130837755476184699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b7288cca536bae4f8efaa8c56e8cac9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shoutCollider: {fileID: 0}
-  damage: 2
 --- !u!1 &7130837755713695928
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,4 +320,4 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  shoutAttack: {fileID: 0}
+  punchAttack: {fileID: 0}
