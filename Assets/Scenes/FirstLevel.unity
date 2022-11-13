@@ -4654,6 +4654,16 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &957664537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7130837755476184699, guid: 0303078a8cd614b3cac402c61b0fe336, type: 3}
+  m_PrefabInstance: {fileID: 7130837755616454547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1241609272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7130837755713695928, guid: 0303078a8cd614b3cac402c61b0fe336, type: 3}
+  m_PrefabInstance: {fileID: 7130837755616454547}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1305545503
 GameObject:
   m_ObjectHideFlags: 0
@@ -4779,6 +4789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7130837755713695933, guid: 0303078a8cd614b3cac402c61b0fe336, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7130837755713695934, guid: 0303078a8cd614b3cac402c61b0fe336, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -4787,10 +4801,41 @@ PrefabInstance:
       propertyPath: m_NeverAutoSwitchControlSchemes
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7130837755713695935, guid: 0303078a8cd614b3cac402c61b0fe336, type: 3}
+      propertyPath: moveSpeed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130837755713695935, guid: 0303078a8cd614b3cac402c61b0fe336, type: 3}
+      propertyPath: punchAttack
+      value: 
+      objectReference: {fileID: 7130837755616454554}
+    - target: {fileID: 7130837755713695935, guid: 0303078a8cd614b3cac402c61b0fe336, type: 3}
+      propertyPath: punchHitbox
+      value: 
+      objectReference: {fileID: 957664537}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0303078a8cd614b3cac402c61b0fe336, type: 3}
 --- !u!4 &7130837755616454548 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7130837755713695906, guid: 0303078a8cd614b3cac402c61b0fe336, type: 3}
+  m_PrefabInstance: {fileID: 7130837755616454547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7130837755616454554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241609272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b1193296c24c041afbbfcb27f7d823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 2
+  punchCollider: {fileID: 7130837755616454555}
+--- !u!61 &7130837755616454555 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1501833429784487158, guid: 0303078a8cd614b3cac402c61b0fe336, type: 3}
   m_PrefabInstance: {fileID: 7130837755616454547}
   m_PrefabAsset: {fileID: 0}
