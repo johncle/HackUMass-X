@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isMoving", isMoving);
         }
     }
-    bool canMove = true;
 
     void Start()
     {
@@ -92,14 +91,6 @@ public class PlayerController : MonoBehaviour
 
     public void EndPunchAttack() {
         punchAttack.StopAttack();
-    }
-
-    void LockMovement() {
-        canMove = false;
-    }
-
-    void UnlockMovement() {
-        canMove = true;
     }
 
     public void Defeated(){
