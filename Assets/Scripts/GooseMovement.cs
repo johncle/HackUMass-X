@@ -12,10 +12,6 @@ public class GooseMovement : MonoBehaviour
     private Vector3 oldPos;
     private Vector3 newPos;
 
-    bool leftFacing = false;
-    bool rightFacing = true;
-    bool isMoving = true;
-
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -26,27 +22,48 @@ public class GooseMovement : MonoBehaviour
         
         if (Vector3.Distance(transform.position, target.position) > 1f)
         {
-            isMoving = true;
-            oldPos = transform.position;
-            newPos = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
-            if (newPos.x < oldPos.x)
+            startMoving();
+
+            oldPos = transform.position; //Save last position
+            newPos = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime); //Calculate new position
+
+            if (newPos.x < oldPos.x) //Update directional flags
             {
-                leftFacing = true;
-                rightFacing = false;
+                turnLeft();
             }
             else if (newPos.x > oldPos.x)
             {
-                leftFacing = false;
-                rightFacing = true;
+                turnRight();
             }
-            transform.position = newPos;
+
+            transform.position = newPos; //Update position
         }
         else
         {
-            isMoving = false;
+            stopMoving();
         }
-        animator.SetBool("leftFacing", leftFacing);
-        animator.SetBool("rightFacing", rightFacing);
-        animator.SetBool("isMoving", isMoving);
+    }
+
+    private void turnLeft()
+    {
+        animator.SetBool("leftFacing", true);
+        animator.SetBool("rightFacing", false);
+    }
+
+    private void turnRight()
+    {
+        animator.SetBool("leftFacing", false);
+        animator.SetBool("rightFacing", true);
+    }
+
+    private void startMoving()
+    {
+        animator.SetBool("isMoving", true);
+    }
+
+    private void stopMoving()
+    {
+        animator.SetBool("isMoving", false);
     }
 }
+
