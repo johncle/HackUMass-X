@@ -9,11 +9,12 @@ public class PlayerCombat : CombatObject
     private Punch punch;
     private Kick kick;
     private float nextAttackTime;
-    private Transform shoutPoint, punchPoint, kickPoint;
+    public Transform shoutPoint, punchPoint, kickPoint;
     private Animator animator;
 
-    protected void Start()
+    protected override void Start()
     {
+        base.Start();
         unlockedPunch = false;
         unlockedKick = false;
         shout = gameObject.AddComponent(typeof(Shout)) as Shout;
@@ -23,8 +24,9 @@ public class PlayerCombat : CombatObject
         animator = GetComponent<Animator>();
     }
 
-    protected void Update()
+    protected override void Update()
     {
+        base.Update();
         if (Time.time >= nextAttackTime) {
             if (Input.GetKeyDown(KeyCode.J))
             {

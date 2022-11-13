@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 138a2e32bf22d6d49b379e07845bdfb4
+guid: 6043a7290fc0c9946898494fa00d8c0a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sam Kick Right_0
+      name: Sam Idle Left_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65ee309835f28df42828039ecbcafa9f
-      internalID: 468965267
+      spriteID: 72c4f3d321d88c8438a6a17b2c093be9
+      internalID: -1183540580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sam Kick Right_1
+      name: Sam Idle Left_1
       rect:
         serializedVersion: 2
         x: 32
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efda60727776c7940bbb72c443792efa
-      internalID: -918922179
+      spriteID: 9200a8133a5e2c74b893a9dd310b2c3a
+      internalID: 1052003874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sam Kick Right_2
+      name: Sam Idle Left_2
       rect:
         serializedVersion: 2
         x: 64
@@ -173,50 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13c36170c1d53ab4b848371e0395111f
-      internalID: -900044514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sam Kick Right_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5cecfab283e68d47996b5127bebe763
-      internalID: 358045109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sam Kick Right_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9fed4874178d594e843234be20fedb9
-      internalID: -1284925522
+      spriteID: c73b562dc19607748bab56ff5326c98d
+      internalID: 481320637
       vertices: []
       indices: 
       edges: []
@@ -232,11 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sam Kick Right_4: -1284925522
-      Sam Kick Right_2: -900044514
-      Sam Kick Right_1: -918922179
-      Sam Kick Right_0: 468965267
-      Sam Kick Right_3: 358045109
+      Sam Idle Left_0: -1183540580
+      Sam Idle Left_1: 1052003874
+      Sam Idle Left_2: 481320637
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

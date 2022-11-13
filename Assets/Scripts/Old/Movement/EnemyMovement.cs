@@ -12,15 +12,15 @@ public class EnemyMovement : MovementObject
     {
         // find player object
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        stoppingDist = 1;
+        // stoppingDist = 1;
     }   
 
-    protected override void Update()
+    protected override void FixedUpdate()
     {
-        if (Vector2.Distance(transform.position, target.position) > stoppingDist)
+        // if (Vector2.Distance(transform.position, target.position) > stoppingDist)
         {
             // move towards player
-            transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.fixedDeltaTime);
         }
     }
 }

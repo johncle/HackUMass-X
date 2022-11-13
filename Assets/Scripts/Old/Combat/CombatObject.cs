@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombatObject : EntityObject
+public class CombatObject : MovementObject
 {
     // deal attackDamage to enemies within attackRange of attackPoint
     protected void Attack(Transform attackPoint, float attackRange, int attackDamage)
